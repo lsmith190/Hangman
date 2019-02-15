@@ -9,15 +9,19 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 
 function buttons() {
     for (let i = 0; i < alphabet.length; i++) {
-        var button = document.createElement("button")
+        var alphButton = document.createElement("button")
         var letters = document.createTextNode(alphabet[i])
-        button.appendChild(letters)
-        document.body.appendChild(button)
+        alphButton.appendChild(letters)
+        document.body.appendChild(alphButton)
+
+
+
+
+        $("button").on('click', function() {
+            console.log(alphabet[i]).val
+        })
+
     }
 }
 
 buttons()
-
-$("button").click(function() {
-    console.log("hi")
-})
