@@ -17,8 +17,12 @@ function buttons() {
         document.body.appendChild(alphButton)
 
 
+
         $(alphButton).on('click', function(event) {
-            console.log($(event.currentTarget).text())
+            if (word.indexOf($(event.currentTarget).text()) > -1) {
+                // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
+                console.log("hi")
+            }
         })
 
     }
@@ -31,12 +35,10 @@ buttons()
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
-
 var ansArr = [];
 for (var i = 0; i < word.length; i++) {
-    ansArr[i] = "__"
+    ansArr[i] = " _ "
+    let display = document.createTextNode(ansArr[i])
+    document.body.appendChild(display)
 }
 console.log(ansArr)
-
-
-// var remainingLetters = word.length;
