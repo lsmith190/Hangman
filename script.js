@@ -6,6 +6,8 @@
 // When user guesses all letters in the secret word, alert that they won the game
 
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+let arrOfAtl = ['varsity', 'guwop', 'beltline', 'cnn', 'falcons', 'braves']
+
 
 function buttons() {
     for (let i = 0; i < alphabet.length; i++) {
@@ -15,13 +17,26 @@ function buttons() {
         document.body.appendChild(alphButton)
 
 
-
-
-        $("button").on('click', function() {
-            console.log(alphabet[i]).val
+        $(alphButton).on('click', function(event) {
+            console.log($(event.currentTarget).text())
         })
 
     }
 }
 
 buttons()
+
+
+
+var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
+console.log(word)
+
+
+var ansArr = [];
+for (var i = 0; i < word.length; i++) {
+    ansArr[i] = "__"
+}
+console.log(ansArr)
+
+
+// var remainingLetters = word.length;
