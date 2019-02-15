@@ -8,17 +8,16 @@
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 function buttons() {
-
-}
-for (let i = 0; i < alphabet.length; i++) {}
-
-function printBtn() {
-    for (var i = 0; i < listBrand.length; i++) {
-        var btn = document.createElement("button");
-        var t = document.createTextNode(listBrand[i]);
-        btn.appendChild(t);
-        document.body.appendChild(btn);
+    for (let i = 0; i < alphabet.length; i++) {
+        var button = document.createElement("button")
+        var letters = document.createTextNode(alphabet[i])
+        button.appendChild(letters)
+        document.body.appendChild(button)
     }
 }
 
-printBtn();
+buttons()
+
+$("button").click(function() {
+    console.log("hi")
+})
