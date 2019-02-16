@@ -6,7 +6,7 @@
 // When user guesses all letters in the secret word, alert that they won the game
 
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-let arrOfAtl = ['varsity', 'guwop', 'beltline', 'cnn', 'falcons', 'braves']
+let arrOfAtl = ['varsity', 'guwop', 'beltline', 'cnn', 'falcons', 'braves', 'marta', 'traffic', 'hawks', 'outkast']
 
 
 function buttons() {
@@ -16,12 +16,14 @@ function buttons() {
         alphButton.appendChild(letters)
         document.body.appendChild(alphButton)
 
-
-
         $(alphButton).on('click', function(event) {
             if (word.indexOf($(event.currentTarget).text()) > -1) {
                 // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
-                console.log("hi")
+                this.style.backgroundColor = 'green'
+                let letterDisplay = document.createTextNode(alphabet[i])
+                document.body.appendChild(letterDisplay)
+            } else {
+                this.style.backgroundColor = "red"
             }
         })
 
@@ -35,6 +37,7 @@ buttons()
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
+
 var ansArr = [];
 for (var i = 0; i < word.length; i++) {
     ansArr[i] = " _ "
@@ -42,3 +45,10 @@ for (var i = 0; i < word.length; i++) {
     document.body.appendChild(display)
 }
 console.log(ansArr)
+
+// If letter button clicked === letter in split word array, replace that underscore with letter value
+// If else, grey out letter button
+
+let split = word.split("");
+console.log(split)
+    // Splits word in array, need to figure out how to split all words
