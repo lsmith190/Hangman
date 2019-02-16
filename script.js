@@ -33,7 +33,6 @@ function buttons() {
 buttons()
 
 
-
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
@@ -46,9 +45,8 @@ for (var i = 0; i < word.length; i++) {
 }
 console.log(ansArr)
 
-// If letter button clicked === letter in split word array, replace that underscore with letter value
-// If else, grey out letter button
+// If letter button clicked === letter in split word array, replace that underscore with letter value and turn green
+// If else, turn letter button red 
 
 let split = word.split("");
 console.log(split)
-    // Splits word in array, need to figure out how to split all words
