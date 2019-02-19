@@ -1,6 +1,6 @@
-// When correct letter is selected, replace underscore with that letter
+// When correct letter is selected, replace underscore with that letter  ****
 // When incorrect letter is selected, do not display anything/create shake animation
-// When user clicks on any letter, fade out/grey out button
+// When user clicks on any letter, fade out/grey out button *****
 // When user clicks incorrect letter, alert that they lost a life
 // When user loses 6 lives, alert that they lost the game and to press restart button
 // When user guesses all letters in the secret word, alert that they won the game
@@ -9,6 +9,7 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 let arrOfAtl = ['varsity', 'guwop', 'beltline', 'cnn', 'falcons', 'braves', 'marta', 'traffic', 'hawks', 'outkast']
 var indexOfClickLetter;
 var ansArr = [];
+var livesRemaining = 6;
 
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
@@ -19,11 +20,12 @@ console.log(split)
 
 for (var i = 0; i < word.length; i++) {
     ansArr.push(" _ ")
-        // ansArr[i] = " _ "
-
-    // let display = document.createTextNode(ansArr[i])
-    // document.body.appendChild(display)
 }
+
+// ansArr[i] = " _ "
+
+// let display = document.createTextNode(ansArr[i])
+// document.body.appendChild(display)
 $(".test").append(ansArr)
 
 function buttons() {
@@ -49,23 +51,18 @@ function buttons() {
             } else {
                 this.style.backgroundColor = "red"
                 alert("Nope...try again")
+                livesRemaining--
+                console.log(livesRemaining)
             }
-
         })
-
     }
 }
 
 buttons()
 
-function x(letterClicked) {
-    return split.indexOf(letterClicked)
-}
+// function x(letterClicked) {
+//     return split.indexOf(letterClicked)
+// }
 
 
-
-
-
-
-// If letter button clicked === letter in split word array, replace that underscore with letter value and turn green
-// If else, turn letter button red
+// If red buttons = the amount of underscores console.log something to test
