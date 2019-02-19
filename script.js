@@ -10,17 +10,16 @@ let arrOfAtl = ['varsity', 'guwop', 'beltline', 'cnn', 'falcons', 'braves', 'mar
 var indexOfClickLetter;
 var ansArr = [];
 var livesRemaining = 6;
+var livesOnPage = document.querySelector(".lives")
 
-if (livesRemaining <= 0) {
-    alert("lost")
-}
 
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
+var lettersRemaining = word.length;
+
 let split = word.split("");
 console.log(split)
-
 
 for (var i = 0; i < word.length; i++) {
     ansArr.push(" _ ")
@@ -55,6 +54,7 @@ function buttons() {
             } else {
                 this.style.backgroundColor = "red"
                 livesRemaining--
+                livesOnPage.innerHTML = livesRemaining
                 console.log(livesRemaining)
             }
             if (livesRemaining <= 0) {
