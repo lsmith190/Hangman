@@ -47,8 +47,10 @@ function buttons() {
             if (word.indexOf($(event.currentTarget).text()) > -1) {
                 // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
                 this.style.backgroundColor = 'green'
-                remainingLetters--
-                console.log(remainingLetters)
+
+
+                // remainingLetters--
+                // console.log(remainingLetters)
 
                 for (i = 0; i < split.length; i++) {
                     if ($(event.currentTarget).text() === split[i]) {
@@ -61,6 +63,17 @@ function buttons() {
                 livesRemaining--
                 livesOnPage.innerHTML = livesRemaining
             }
+
+            // Counting number of underscores remaining in random word
+            spaceCounter = 0;
+            for (var i = 0; i < ansArr.length; i++) {
+                if (ansArr[i] == ' _ ') {
+                    spaceCounter++;
+                }
+            }
+            console.log("spaceCounter " + spaceCounter);
+
+
             if (livesRemaining <= 0) {
                 alert('Loser! Press "start" to try again.')
                 $(".disable").attr("disabled", true)
