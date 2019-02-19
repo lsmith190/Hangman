@@ -11,6 +11,10 @@ var indexOfClickLetter;
 var ansArr = [];
 var livesRemaining = 6;
 
+if (livesRemaining <= 0) {
+    alert("lost")
+}
+
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
@@ -50,13 +54,16 @@ function buttons() {
                 }
             } else {
                 this.style.backgroundColor = "red"
-                alert("Nope...try again")
                 livesRemaining--
                 console.log(livesRemaining)
+            }
+            if (livesRemaining <= 0) {
+                alert('Loser! Press "start" to try again.')
             }
         })
     }
 }
+
 
 buttons()
 
