@@ -12,11 +12,10 @@ var ansArr = [];
 var livesRemaining = 6;
 var livesOnPage = document.querySelector(".lives")
 
-
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
-var lettersRemaining = word.length;
+var remainingLetters = word.length;
 
 let split = word.split("");
 console.log(split)
@@ -25,11 +24,15 @@ for (var i = 0; i < word.length; i++) {
     ansArr.push(" _ ")
 }
 
+// console.log(ansArr.length)
+
+
 // ansArr[i] = " _ "
 
 // let display = document.createTextNode(ansArr[i])
 // document.body.appendChild(display)
 $(".test").append(ansArr)
+
 
 function buttons() {
     for (let i = 0; i < alphabet.length; i++) {
@@ -37,17 +40,19 @@ function buttons() {
         var letters = document.createTextNode(alphabet[i])
         alphButton.appendChild(letters)
         document.body.appendChild(alphButton)
+        $(alphButton).addClass("disable")
 
 
         $(alphButton).on('click', function(event) {
             if (word.indexOf($(event.currentTarget).text()) > -1) {
                 // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
                 this.style.backgroundColor = 'green'
+                remainingLetters--
+                console.log(remainingLetters)
 
                 for (i = 0; i < split.length; i++) {
                     if ($(event.currentTarget).text() === split[i]) {
                         ansArr[i] = $(event.currentTarget).text()
-
                     }
                     $(".test").text(ansArr.join(" "))
                 }
@@ -55,10 +60,10 @@ function buttons() {
                 this.style.backgroundColor = "red"
                 livesRemaining--
                 livesOnPage.innerHTML = livesRemaining
-                console.log(livesRemaining)
             }
             if (livesRemaining <= 0) {
                 alert('Loser! Press "start" to try again.')
+                $(".disable").attr("disabled", true)
             }
         })
     }
@@ -66,10 +71,3 @@ function buttons() {
 
 
 buttons()
-
-// function x(letterClicked) {
-//     return split.indexOf(letterClicked)
-// }
-
-
-// If red buttons = the amount of underscores console.log something to test
