@@ -70,7 +70,6 @@ function buttons() {
                     spaceCounter++;
                 }
             }
-            console.log("spaceCounter " + spaceCounter);
 
             if (spaceCounter <= 0) {
                 alert("You won!")
