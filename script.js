@@ -12,6 +12,7 @@ var ansArr = [];
 var livesRemaining = 6;
 var livesOnPage = document.querySelector(".lives")
 
+
 var word = arrOfAtl[Math.floor(Math.random() * arrOfAtl.length)];
 console.log(word)
 
@@ -64,6 +65,11 @@ function buttons() {
                 livesOnPage.innerHTML = livesRemaining
             }
 
+            if (livesRemaining <= 0) {
+                alert('Loser! Press "start" to try again.')
+                $(".disable").attr("disabled", true)
+            }
+
             // Counting number of underscores remaining in random word
             spaceCounter = 0;
             for (var i = 0; i < ansArr.length; i++) {
@@ -73,11 +79,11 @@ function buttons() {
             }
             console.log("spaceCounter " + spaceCounter);
 
-
-            if (livesRemaining <= 0) {
-                alert('Loser! Press "start" to try again.')
+            if (spaceCounter <= 0) {
+                alert("You won!")
                 $(".disable").attr("disabled", true)
             }
+
         })
     }
 }
