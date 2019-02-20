@@ -19,7 +19,7 @@
 7. Press start to replay. 
 
 ## Wireframe
-<a href="https://imgur.com/iLf2DQT"><img src="https://i.imgur.com/iLf2DQT.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/iLf2DQT"><img src="https://i.imgur.com/iLf2DQT.jpg?1" title="source: imgur.com" /></a>
 
 ## Technologies Used
 Languages: HTML, CSS, Javascript
