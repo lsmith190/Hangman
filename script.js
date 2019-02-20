@@ -25,13 +25,7 @@ for (var i = 0; i < word.length; i++) {
     ansArr.push(" _ ")
 }
 
-// console.log(ansArr.length)
 
-
-// ansArr[i] = " _ "
-
-// let display = document.createTextNode(ansArr[i])
-// document.body.appendChild(display)
 $(".test").append(ansArr)
 
 
@@ -51,9 +45,6 @@ function buttons() {
                 // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
                 this.style.backgroundColor = 'green'
 
-
-                // remainingLetters--
-                // console.log(remainingLetters)
 
                 for (i = 0; i < split.length; i++) {
                     if ($(event.currentTarget).text() === split[i]) {
