@@ -1,9 +1,9 @@
 # Project-1--Hangman
 
 <ul>
-<li>Project: http://127.0.0.1:64133/<li>
-<li>Trello Board: https://trello.com/b/ROQwotnq/project-1-hangman<li>
-<li>GitHub: https://github.com/lsmith190/Hangman<li>
+<li>Project: http://127.0.0.1:64133/</li>
+<li>Trello Board: https://trello.com/b/ROQwotnq/project-1-hangman</li>
+<li>GitHub: https://github.com/lsmith190/Hangman</li>
 </ul>
 
 ## Overview
@@ -19,7 +19,7 @@
 7. Press start to replay. 
 
 ## Wireframe
-        Hangman/IMG_8256.jpg
+<a href="https://imgur.com/iLf2DQT"><img src="https://i.imgur.com/iLf2DQT.jpg" title="source: imgur.com" /></a>
 
 ## Technologies Used
 Languages: HTML, CSS, Javascript
