@@ -46,6 +46,7 @@ function buttons() {
 
 
         $(alphButton).on('click', function(event) {
+
             if (word.indexOf($(event.currentTarget).text()) > -1) {
                 // If statement is checking to see if letter is contained within word. Must include > -1, javacript does not recognize 0 as true
                 this.style.backgroundColor = 'green'

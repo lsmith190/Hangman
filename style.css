@@ -18,7 +18,8 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-h3 {
+h3,
+.livesRemaining {
     font-family: 'Montserrat', sans-serif;
     ;
 }
@@ -28,4 +29,12 @@ h3 {
     padding: 50px 20px 50px 20px;
 }
 
-.alphButtons {}
+.alphButtons {
+    font-size: 20px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.alphButtons:hover {
+    background-color: rgb(201, 152, 152);
+}
