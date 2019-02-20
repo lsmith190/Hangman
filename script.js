@@ -38,6 +38,7 @@ $(".test").append(ansArr)
 function buttons() {
     for (let i = 0; i < alphabet.length; i++) {
         var alphButton = document.createElement("button")
+        alphButton.classList.add("alphButtons")
         var letters = document.createTextNode(alphabet[i])
         alphButton.appendChild(letters)
         document.body.appendChild(alphButton)
